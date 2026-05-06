@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>청소년 정책 제안 원데이 클래스</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Pretendard Font -->
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard.css" />
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Pretendard', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f0fdfa',
+                            100: '#ccfbf1',
+                            500: '#14b8a6', // Teal 500
+                            600: '#0d9488', // Teal 600
+                            900: '#134e4a', // Teal 900
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Pretendard', sans-serif;
+            background-color: #f8fafc;
+            color: #334155;
+            scroll-behavior: smooth;
+        }
+        .reveal {
+            animation: fadeInUp 0.8s ease-out forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        @keyframes fadeInUp {
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-brand-200 selection:text-brand-900 overflow-x-hidden">
+
+    <!-- 상단 네비게이션 -->
+    <nav class="bg-white/90 backdrop-blur-md sticky top-0 z-50 border-b border-slate-200 shadow-sm">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+                <div class="bg-brand-500 p-1.5 rounded-lg">
+                    <i data-lucide="book-open" class="w-5 h-5 text-white"></i>
+                </div>
+                <span class="font-bold text-slate-800 truncate">정책제안 원데이 클래스</span>
+            </div>
+            <a href="#toc" class="text-sm font-semibold text-brand-600 bg-brand-50 px-3 py-1.5 rounded-full hover:bg-brand-100 transition">
+                목차보기
+            </a>
+        </div>
+    </nav>
+
+    <!-- 히어로 섹션 -->
+    <header class="bg-gradient-to-br from-brand-900 via-brand-600 to-emerald-500 text-white pt-16 pb-20 px-4 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-20" style="background-image: radial-gradient(#ffffff 2px, transparent 2px); background-size: 30px 30px;"></div>
+        <div class="max-w-4xl mx-auto text-center relative z-10 reveal">
+            <span class="inline-block py-1 px-3 rounded-full bg-white/20 backdrop-blur-sm text-brand-50 font-semibold text-xs sm:text-sm mb-4 border border-white/30">
+                처음부터 차근차근! 기초 통합 교육
+            </span>
+            <h1 class="text-3xl sm:text-5xl font-extrabold leading-tight mb-4 break-keep">
+                청소년 정책 제안<br><span class="text-yellow-300">원데이 클래스</span>
+            </h1>
+            <p class="text-brand-100 text-sm sm:text-base font-light">
+                경기도청소년동행멘토단 | 00시 청소년참여위원회
+            </p>
+        </div>
+    </header>
+
+    <main class="max-w-4xl mx-auto px-4 sm:px-6 py-8 space-y-12 sm:space-y-16">
+
+        <!-- 목차 -->
+        <section id="toc" class="reveal">
+            <h2 class="text-2xl font-bold text-slate-800 mb-4 flex items-center gap-2">
+                <i data-lucide="list" class="w-6 h-6 text-brand-500"></i>
+                오늘의 학습 목차
+            </h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <a href="#ch1" class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm hover:border-brand-300 hover:shadow-md transition group">
+                    <span class="text-brand-500 font-bold text-sm block mb-1">Chapter 1</span>
+                    <h3 class="text-lg font-bold text-slate-800 group-hover:text-brand-600 transition">정책, 그 어려움에 대하여</h3>
+                    <p class="text-sm text-slate-500 mt-1">법, 제도, 정책의 차이와 개념 이해</p>
+                </a>
+                <a href="#ch2" class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm hover:border-brand-300 hover:shadow-md transition group">
+                    <span class="text-brand-500 font-bold text-sm block mb-1">Chapter 2</span>
+                    <h3 class="text-lg font-bold text-slate-800 group-hover:text-brand-600 transition">원인으로 찾는 주제모색</h3>
+                    <p class="text-sm text-slate-500 mt-1">정책의 기조를 읽고 의제 설정하기</p>
+                </a>
+                <a href="#ch3" class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm hover:border-brand-300 hover:shadow-md transition group">
+                    <span class="text-brand-500 font-bold text-sm block mb-1">Chapter 3</span>
+                    <h3 class="text-lg font-bold text-slate-800 group-hover:text-brand-600 transition">매력적인 정책 만들기</h3>
+                    <p class="text-sm text-slate-500 mt-1">최고의 정보를 수집하고 차별화하기</p>
+                </a>
+                <a href="#ch4" class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm hover:border-brand-300 hover:shadow-md transition group">
+                    <span class="text-brand-500 font-bold text-sm block mb-1">Chapter 4</span>
+                    <h3 class="text-lg font-bold text-slate-800 group-hover:text-brand-600 transition">사소한 문제가 우리의 정책으로!</h3>
+                    <p class="text-sm text-slate-500 mt-1">정책 제안서 작성 4단계 완벽 가이드</p>
+                </a>
+            </div>
+        </section>
+
+        <hr class="border-slate-200">
+
+        <!-- Chapter 1 -->
+        <section id="ch1" class="reveal scroll-mt-20">
+            <div class="mb-6">
+                <span class="text-brand-500 font-bold text-sm mb-1 block">Chapter 1</span>
+                <h2 class="text-2xl sm:text-3xl font-bold text-slate-800">정책, 그 어려움에 대하여</h2>
+            </div>
+
+            <!-- 정책 이해 3요소 -->
+            <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200 mb-8">
+                <h3 class="text-lg font-bold text-slate-800 mb-4 text-center">정책을 이해하는 3가지 관점</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div class="bg-brand-50 p-4 rounded-xl text-center border border-brand-100">
+                        <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center mx-auto mb-3 text-brand-600 shadow-sm">
+                            <i data-lucide="users" class="w-6 h-6"></i>
+                        </div>
+                        <h4 class="font-bold text-slate-800">공공성 (모두를 위한)</h4>
+                        <p class="text-xs text-slate-600 mt-1">정부, 지자체 등 공공기관이 모두를 위해 수행</p>
+                    </div>
+                    <div class="bg-brand-50 p-4 rounded-xl text-center border border-brand-100">
+                        <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center mx-auto mb-3 text-brand-600 shadow-sm">
+                            <i data-lucide="target" class="w-6 h-6"></i>
+                        </div>
+                        <h4 class="font-bold text-slate-800">목표성 (문제 해결)</h4>
+                        <p class="text-xs text-slate-600 mt-1">사회 문제 해결 및 국민 삶의 질 향상 목적</p>
+                    </div>
+                    <div class="bg-brand-50 p-4 rounded-xl text-center border border-brand-100">
+                        <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center mx-auto mb-3 text-brand-600 shadow-sm">
+                            <i data-lucide="scale" class="w-6 h-6"></i>
+                        </div>
+                        <h4 class="font-bold text-slate-800">강제성 (법적 근거)</h4>
+                        <p class="text-xs text-slate-600 mt-1">합법적 강제력을 수반하여 실행되는 방침</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 법, 제도, 정책 비유 -->
+            <div class="bg-slate-800 rounded-2xl p-6 sm:p-8 text-white shadow-lg overflow-hidden relative">
+                <i data-lucide="school" class="absolute -right-6 -bottom-6 w-40 h-40 text-slate-700 opacity-50"></i>
+                <h3 class="text-xl font-bold mb-6 relative z-10">🏫 학교로 알아보는 [법 / 제도 / 정책]</h3>
+                <div class="space-y-4 relative z-10">
+                    <div class="flex items-center gap-5 bg-slate-700/50 p-4 rounded-xl border border-slate-600">
+                        <div class="bg-rose-500 w-16 h-16 rounded-xl flex items-center justify-center shrink-0 shadow-sm">
+                            <span class="font-bold text-sm text-center leading-tight text-white">법<br>(Law)</span>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-white text-lg mb-1">물리적인 학교 건물</h4>
+                            <p class="text-sm text-slate-300 leading-relaxed">비바람을 피하고 안전하게 배울 수 있는 공간 그 자체 (국가의 강제적 규범)</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-5 bg-slate-700/50 p-4 rounded-xl border border-slate-600">
+                        <div class="bg-amber-500 w-16 h-16 rounded-xl flex items-center justify-center shrink-0 shadow-sm">
+                            <span class="font-bold text-sm text-center leading-tight text-white">제도<br>(System)</span>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-white text-lg mb-1">수업 시간표와 학년 편성</h4>
+                            <p class="text-sm text-slate-300 leading-relaxed">학교 구성원들이 안전하게 생활하기 위한 운영 규칙 및 체계</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-5 bg-slate-700/50 p-4 rounded-xl border border-slate-600">
+                        <div class="bg-brand-500 w-16 h-16 rounded-xl flex items-center justify-center shrink-0 shadow-sm">
+                            <span class="font-bold text-sm text-center leading-tight text-white">정책<br>(Policy)</span>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-white text-lg mb-1">무상 급식, 현장 체험 학습</h4>
+                            <p class="text-sm text-slate-300 leading-relaxed">문제를 해결하기 위해 학생들에게 주어지는 실질적인 혜택과 실행 행동</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Chapter 2 -->
+        <section id="ch2" class="reveal scroll-mt-20">
+            <div class="mb-6">
+                <span class="text-brand-500 font-bold text-sm mb-1 block">Chapter 2</span>
+                <h2 class="text-2xl sm:text-3xl font-bold text-slate-800">원인으로 찾아보는 주제모색활동</h2>
+            </div>
+
+            <div class="bg-rose-50 border border-rose-100 rounded-2xl p-6 mb-8">
+                <h3 class="font-bold text-rose-800 text-lg mb-2 flex items-center gap-2">
+                    <i data-lucide="alert-triangle" class="w-5 h-5"></i>
+                    청소년 문제 = 청소년 정책?
+                </h3>
+                <p class="text-slate-700 text-sm leading-relaxed">
+                    청소년 문제를 해결하기 위해 정책이 수립되지만, <strong>모든 개인의 불편함이 정책이 될 수는 없습니다.</strong><br>
+                    우리가 제안한 정책이 '정책의 기조(흐름)'를 읽지 못한다면 한 장의 종이에 불과합니다.
+                </p>
+            </div>
+
+            <!-- 정책 리터러시 -->
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden mb-8">
+                <div class="bg-brand-600 text-white p-5 flex items-center justify-between">
+                    <h3 class="font-bold text-lg">💡 정책의 흐름 읽기 (정책 리터러시)</h3>
+                </div>
+                <div class="p-6 sm:p-8">
+                    <p class="font-bold text-slate-800 mb-4 text-center">제7차 청소년정책 기본계획 (2023~2027)</p>
+                    <p class="text-sm text-slate-600 text-center mb-6">앞으로 5년간의 정책 방향이 담긴 핵심 자료입니다.</p>
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="border border-slate-200 p-4 rounded-xl">
+                            <span class="text-brand-600 font-bold text-xs">비전</span>
+                            <p class="font-bold text-slate-800 mt-1">디지털 시대를 선도하는 글로벌 K-청소년</p>
+                        </div>
+                        <div class="border border-slate-200 p-4 rounded-xl">
+                            <span class="text-brand-600 font-bold text-xs">목표</span>
+                            <p class="font-bold text-slate-800 mt-1">성장기회 제공, 안전한 보호 환경 조성</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 주제 모색 프레임워크 -->
+            <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200">
+                <h3 class="font-bold text-slate-800 mb-4 text-center">📝 정책 의제(Agenda) 설정 보드</h3>
+                <div class="space-y-4">
+                    <div class="bg-yellow-100/50 p-4 rounded-lg border border-yellow-200">
+                        <span class="font-bold text-yellow-800 text-sm">1. 청소년의 목소리</span>
+                        <p class="text-sm text-slate-700 mt-1">실제 지역 청소년들이 겪고 있는 불편함이나 어려움 자유롭게 작성</p>
+                    </div>
+                    <div class="bg-sky-100/50 p-4 rounded-lg border border-sky-200">
+                        <span class="font-bold text-sky-800 text-sm">2. 가설과 발견</span>
+                        <p class="text-sm text-slate-700 mt-1">기존에 시행 중인 정책 검색 및 정책 제안에서 궁금한 점 파악</p>
+                    </div>
+                    <div class="bg-indigo-100/50 p-4 rounded-lg border border-indigo-200">
+                        <span class="font-bold text-indigo-800 text-sm">3. 큰 이슈와 정책 제안 전략</span>
+                        <p class="text-sm text-slate-700 mt-1">제안 이유(Big Issue)와 핵심 정책의 구체적 전략(Strategy) 구상</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Chapter 3 -->
+        <section id="ch3" class="reveal scroll-mt-20">
+            <div class="mb-6">
+                <span class="text-brand-500 font-bold text-sm mb-1 block">Chapter 3</span>
+                <h2 class="text-2xl sm:text-3xl font-bold text-slate-800">최고의 정보로 매력적인 정책 만들기</h2>
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200 mb-8">
+                <h3 class="text-lg font-bold text-slate-800 mb-4 flex items-center gap-2">
+                    <i data-lucide="search" class="w-5 h-5 text-brand-500"></i>
+                    기존 정책 유무 확인은 필수!
+                </h3>
+                <p class="text-sm text-slate-600 mb-4 leading-relaxed">
+                    아무리 참신한 아이디어라도 <strong>이미 시행 중인 정책</strong>이라면 채택되지 않습니다.<br>
+                    만약 이미 시행 중이지만 체감하지 못한다면? <strong>체감하지 못하는 원인을 분석하여 기존 정책과 '차별화'된 방안을 제시</strong>해야 합니다.
+                </p>
+                
+                <h4 class="font-bold text-sm text-slate-700 mt-6 mb-3">🔍 정보 검색처 (자료 수집)</h4>
+                <div class="flex flex-wrap gap-2">
+                    <span class="bg-slate-100 px-3 py-1.5 rounded-lg text-sm text-slate-700">국가법령정보센터</span>
+                    <span class="bg-slate-100 px-3 py-1.5 rounded-lg text-sm text-slate-700">성평등가족부(현 여가부)</span>
+                    <span class="bg-slate-100 px-3 py-1.5 rounded-lg text-sm text-slate-700">경기도청 / 지자체</span>
+                    <span class="bg-slate-100 px-3 py-1.5 rounded-lg text-sm text-slate-700">빅카인즈 (BIG KINDS)</span>
+                    <span class="bg-slate-100 px-3 py-1.5 rounded-lg text-sm text-slate-700">RISS (학술정보)</span>
+                </div>
+            </div>
+
+            <!-- 차별화 예시 -->
+            <div class="bg-gradient-to-r from-brand-50 to-emerald-50 rounded-2xl p-6 border border-brand-100">
+                <h3 class="font-bold text-slate-800 mb-4 text-center">💡 정책 차별화 및 구체화 예시</h3>
+                <div class="space-y-4">
+                    <div class="bg-white p-4 rounded-xl shadow-sm border border-slate-200">
+                        <span class="text-rose-500 font-bold text-xs bg-rose-50 px-2 py-1 rounded">보완 필요</span>
+                        <p class="text-sm text-slate-700 mt-2 font-medium">"농어촌 청소년 체험 기회가 부족하니 디지털 교육을 확대하자."</p>
+                        <p class="text-xs text-slate-500 mt-1">→ 경기도교육청에서도 이미 시행 중. 구체적인 사례/방식이 부족함.</p>
+                    </div>
+                    <div class="text-center">
+                        <i data-lucide="arrow-down" class="w-6 h-6 text-brand-400 mx-auto"></i>
+                    </div>
+                    <div class="bg-white p-4 rounded-xl shadow-sm border border-brand-200">
+                        <span class="text-brand-600 font-bold text-xs bg-brand-50 px-2 py-1 rounded">우수 제안</span>
+                        <p class="text-sm text-slate-800 mt-2 font-bold">1. 지역 순회형 'AI 미래교육 버스' 운영</p>
+                        <ul class="text-xs text-slate-600 mt-1 list-disc list-inside">
+                            <li>교육 취약 지역 중심 이동형 체험 공간 운영</li>
+                            <li>방학/주말 집중 운영, 지역 청소년센터 연계</li>
+                        </ul>
+                        <p class="text-sm text-slate-800 mt-3 font-bold">2. 청소년 AI 멘토링 플랫폼 구축</p>
+                        <ul class="text-xs text-slate-600 mt-1 list-disc list-inside">
+                            <li>지역 대학 및 연구기관(경기테크노파크 등) 협력 전문가 매칭</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Chapter 4 -->
+        <section id="ch4" class="reveal scroll-mt-20">
+            <div class="mb-6">
+                <span class="text-brand-500 font-bold text-sm mb-1 block">Chapter 4</span>
+                <h2 class="text-2xl sm:text-3xl font-bold text-slate-800">사소한 문제가 우리의 정책으로!</h2>
+                <p class="text-slate-600 mt-2">정책 제안서 작성 4단계 가이드</p>
+            </div>
+
+            <!-- 4단계 가이드 -->
+            <div class="space-y-4">
+                <!-- 1단계 -->
+                <div class="bg-white border border-slate-200 p-5 rounded-2xl shadow-sm flex flex-col sm:flex-row gap-4 items-start">
+                    <div class="bg-slate-800 text-white font-bold w-10 h-10 rounded-full flex items-center justify-center shrink-0">1</div>
+                    <div class="w-full">
+                        <h4 class="font-bold text-slate-800 text-lg mb-2">누가 제안서를 읽는가? (제안 부서)</h4>
+                        <p class="text-sm text-slate-600 leading-relaxed mb-2">시청, 교육지원청 등 정책을 시행할 주무부처를 명확히 하고, 청소년과 지자체의 시각 양쪽을 모두 고려하여 작성합니다.</p>
+                    </div>
+                </div>
+
+                <!-- 2단계 -->
+                <div class="bg-white border border-slate-200 p-5 rounded-2xl shadow-sm flex flex-col sm:flex-row gap-4 items-start">
+                    <div class="bg-slate-800 text-white font-bold w-10 h-10 rounded-full flex items-center justify-center shrink-0">2</div>
+                    <div class="w-full">
+                        <h4 class="font-bold text-slate-800 text-lg mb-2">문제점이 공감되는가? (현황/문제점)</h4>
+                        <p class="text-sm text-slate-600 leading-relaxed mb-2">누가 봐도 문제점이 공감되도록 객관적 데이터(통계, 뉴스 기사)를 활용하여 명확히 정의합니다. 출처 기재는 필수!</p>
+                    </div>
+                </div>
+
+                <!-- 3단계 -->
+                <div class="bg-white border border-slate-200 p-5 rounded-2xl shadow-sm flex flex-col sm:flex-row gap-4 items-start">
+                    <div class="bg-slate-800 text-white font-bold w-10 h-10 rounded-full flex items-center justify-center shrink-0">3</div>
+                    <div class="w-full">
+                        <h4 class="font-bold text-slate-800 text-lg mb-2">해결책이 명확한가? (정책 과제)</h4>
+                        <p class="text-sm text-slate-600 leading-relaxed mb-2">어떻게 실현할지 구체적인 방법을 적습니다. 기존 정책과 차별화되는 점, 국내외 우수 사례 근거를 덧붙이면 좋습니다.</p>
+                        <div class="bg-brand-50 p-3 rounded-lg border border-brand-100 mt-2">
+                            <span class="font-bold text-brand-700 text-xs">💡 작성 꿀팁: 개조식 작성</span>
+                            <p class="text-xs text-slate-600 mt-1">간결하게 요점 중심으로 서술하고 짧게 나열하는 방식 (~음, ~함 체 사용)</p>
+                            <p class="text-xs text-slate-500 mt-1 line-through">청소년 방과 후 여가에는 독서 등이 있습니다. (X)</p>
+                            <p class="text-xs text-brand-600 font-bold mt-0.5">청소년 방과 후 여가생활: 독서, 스마트폰 활용 등 (O)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4단계 -->
+                <div class="bg-white border border-slate-200 p-5 rounded-2xl shadow-sm flex flex-col sm:flex-row gap-4 items-start">
+                    <div class="bg-slate-800 text-white font-bold w-10 h-10 rounded-full flex items-center justify-center shrink-0">4</div>
+                    <div class="w-full">
+                        <h4 class="font-bold text-slate-800 text-lg mb-2">기대 효과 예상하기 (기대 효과)</h4>
+                        <p class="text-sm text-slate-600 leading-relaxed mb-2">정책이 실현되었을 때 청소년 개인, 지역사회에 나타날 긍정적인 변화를 중심으로 작성합니다.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 표준 제안서 폼 -->
+            <div class="mt-10 bg-slate-100 p-6 sm:p-8 rounded-2xl border border-slate-200">
+                <h3 class="font-bold text-slate-800 text-center mb-6">📄 표준 청소년정책 제안서 양식 구조</h3>
+                <div class="bg-white border border-slate-300 shadow-md p-6 max-w-lg mx-auto aspect-[1/1.4] flex flex-col gap-4 text-sm relative">
+                    <div class="border-b-2 border-slate-800 pb-2 mb-2">
+                        <h4 class="text-center font-bold text-lg">[제안 제목: 한 눈에 이해되도록 작성]</h4>
+                        <p class="text-right text-xs text-slate-500 mt-2">[제안자: OOO]</p>
+                    </div>
+                    <div>
+                        <span class="font-bold text-slate-800 bg-slate-100 px-2 py-1">▣ 제안배경</span>
+                        <div class="pl-2 mt-2 space-y-1 text-slate-500">
+                            <p>○ 현황 및 객관적 통계 자료</p>
+                            <p>○ 현재 발생하고 있는 문제점</p>
+                        </div>
+                    </div>
+                    <div>
+                        <span class="font-bold text-slate-800 bg-slate-100 px-2 py-1">▣ 정책과제</span>
+                        <div class="pl-2 mt-2 space-y-1 text-slate-500">
+                            <p>① 구체적인 실행 방안 1 (개조식)</p>
+                            <p>② 구체적인 실행 방안 2 (개조식)</p>
+                        </div>
+                    </div>
+                    <div>
+                        <span class="font-bold text-slate-800 bg-slate-100 px-2 py-1">▣ 기대효과</span>
+                        <div class="pl-2 mt-2 space-y-1 text-slate-500">
+                            <p>○ 청소년 및 지역사회에 미치는 긍정적 영향</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- 푸터 -->
+    <footer class="bg-slate-900 text-slate-400 py-10 text-center border-t border-slate-800">
+        <div class="max-w-4xl mx-auto px-4">
+            <p class="text-lg font-bold text-white mb-2">우리 모두의 사소한 말이 정책으로! 🚀</p>
+            <p class="text-xs text-slate-500">Copyright All Right Reserved by 경기도청소년활동진흥센터<br>이 자료는 교육용으로 제작된 모바일 반응형 교안입니다.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Lucide 아이콘 초기화
+        lucide.createIcons();
+    </script>
+</body>
+</html>
